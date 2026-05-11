@@ -14,7 +14,7 @@ import requests
 # ========================================================
 # 🔒 [DRX SECURITY & INTEGRITY SYSTEM]
 # ========================================================
-REAL_OWNER = "@DRX_POWER"
+REAL_OWNER = "@Ayanislive8"
 REMOTE_UPDATE_URL = "https://raw.githubusercontent.com/your-repo/master/bgmi" # अपना लिंक यहाँ बदलें
 
 def check_security():
@@ -198,7 +198,7 @@ def show_my_info(message):
                 f"💎 <b>𝐏𝐥𝐚𝐧 𝐓𝐲𝐩𝐞:</b> {plan_type}\n"
                 f"⏳ <b>𝐑𝐞𝐦𝐚𝐢𝐧𝐢𝐧𝐠 𝐓𝐢𝐦𝐞:</b> {expiry}\n"
                 f"━━━━━━━━━━━━━━━━━━━━━━\n"
-                f"🚀 <b>𝐏𝐨𝐰𝐞𝐫:</b> 𝐃𝐑𝐗 𝐃𝐃𝐎𝐒 𝐏𝐎𝐖𝐄𝐑 🔥"
+                f"🚀 <b>𝐏𝐨𝐰𝐞𝐫:</b> ARX 𝐃𝐃𝐎𝐒 𝐏𝐎𝐖𝐄𝐑 🔥"
             )
 
             try:
@@ -234,7 +234,7 @@ def show_plan_list(message):
         "💰 𝐏𝐫𝐢𝐜𝐞: ₹1499\n"
         "🚀 𝐏𝐨𝐰𝐞𝐫: VIP Slots + Support\n\n"
         "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
-        "💳 <b>𝐅𝐨𝐫 𝐏𝐮𝐫𝐜𝐡𝐚𝐬𝐞 𝐂𝐨𝐧𝐭𝐚𝐜𝐭:</b> @DRX_POWER\n"
+        "💳 <b>𝐅𝐨𝐫 𝐏𝐮𝐫𝐜𝐡𝐚𝐬𝐞 𝐂𝐨𝐧𝐭𝐚𝐜𝐭:</b> @Ayanislive8\n"
         "📢 <b>𝐍𝐨𝐭𝐞:</b> Keys are non-refundable."
     )
     
@@ -256,8 +256,8 @@ def handle_bgmi(message):
         return
         
     # --- [STEP 2] PLAN CHECK ---
-    if user_id = [7537581754]allowed_user_ids:
-        bot.reply_to(message, "🚫 <b>𝐓𝐮𝐦𝐚𝐫𝐚 𝐤𝐨𝐢 𝐛𝐡𝐢 𝐩𝐥𝐚𝐧 𝐚𝐜𝐭𝐢𝐯𝐞 𝐧𝐚𝐡𝐢 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 @DRX_POWER</b>", parse_mode="HTML")
+    if user_id = in [7537581754]allowed_user_ids:
+        bot.reply_to(message, "🚫 <b>𝐓𝐮𝐦𝐚𝐫𝐚 𝐤𝐨𝐢 𝐛𝐡𝐢 𝐩𝐥𝐚𝐧 𝐚𝐜𝐭𝐢𝐯𝐞 𝐧𝐚𝐡𝐢 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 @Ayanislive8</b>", parse_mode="HTML")
         return
         
     # --- [STEP 3] SLOT CHECK ---
@@ -443,7 +443,7 @@ def broadcast_message(message):
                 "━━━━━━━━━━━━━━━━━━━━━━\n\n"
                 f"📝 {text_to_broadcast}\n\n"
                 "━━━━━━━━━━━━━━━━━━━━━━\n"
-                "🚀 <b>𝐏𝐨𝐰𝐞𝐫:</b> <b>𝐃𝐑𝐗 𝐃𝐃𝐎𝐒 𝐏𝐎𝐖𝐄𝐑 🔥</b>"
+                "🚀 <b>𝐏𝐨𝐰𝐞𝐫:</b> <b> ARX 𝐃𝐃𝐎𝐒 𝐏𝐎𝐖𝐄𝐑 🔥</b>"
             )
 
             # Sabhi users ko bhejna
