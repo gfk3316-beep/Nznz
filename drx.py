@@ -45,7 +45,7 @@ def verify_developer_file():
     # 2. चेक करना कि क्या फाइल में आपका नाम है
     with open(dev_file, 'r') as f:
         content = f.read()
-        if "@DRX_POWER" not in content or "Dipanshu" not in content:
+        if "@ayanislive8" not in content or "ayan" not in content:
             print("❌ TAMPERING DETECTED in developer.txt!")
             sys.exit(1) # नाम बदलने पर क्रैश
 
