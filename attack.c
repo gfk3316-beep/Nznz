@@ -8,8 +8,8 @@
 #include <signal.h>
 #include <sys/socket.h>
 
-// ========== DIPANSHU'S MASTER CONFIG ==========
-#define OWNER_WATERMARK "@DRX_POWER"
+// ========== AYAN'S MASTER CONFIG ==========
+#define OWNER_WATERMARK "@Ayanislive8"
 #define EXPIRY_DAY 30
 #define EXPIRY_MONTH 6
 #define EXPIRY_YEAR 2026
