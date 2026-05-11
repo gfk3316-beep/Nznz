@@ -115,7 +115,7 @@ def run_attack_process(chat_id, target, port, duration, threads):
             f"━━━━━━━━━━━━━━━━━━━━━━\n"
             f"🚀 <b>𝐎𝐰𝐧𝐞𝐫:</b> {REAL_OWNER}"
         )
-        bot.send_message(chat_id, finished_text, parse_mode="HTML")
+        bot.send_message(chat_id, finished_text, )
 
     except Exception as e:
         bot.send_message(chat_id, f"❌ <b>Error:</b> Attack interrupted or binary failed.")
