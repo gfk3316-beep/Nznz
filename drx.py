@@ -323,16 +323,16 @@ def handle_bgmi(message):
     
     slots_used = len(active_attacks)
     slots_left = MAX_SLOTS - slots_used
-
-    bot.reply_to(message, (
-        f"🚀 <b>𝐀𝐓𝐓𝐀𝐂𝐊 𝐒𝐓𝐀𝐑𝐓𝐄𝐃.🔥🔥</b>\n"
-        f"━━━━━━━━━━━━━━━━━━━━━━\n"
-        f"📍 <b>𝐓𝐚𝐫𝐠𝐞𝐭:</b> <code>{target}</code>\n"
-        f"🔌 <b>𝐏𝐨𝐫𝐭:</b> <code>{port}</code>\n"
-        f"⏳ <b>𝐓𝐢𝐦𝐞:</b> <code>{time_duration}s</code>\n"
-        f"📊 <b>𝐒𝐥𝐨𝐭𝐬:</b> {slots_used}/{MAX_SLOTS} (Left: {slots_left})\n"
-        f"━━━━━━━━━━━━━━━━━━━━━━\n"
-        f"🚀 <b>𝐏𝐨𝐰𝐞𝐫:</b> 𝐃𝐑𝐗 𝐃𝐃𝐎𝐒 𝐏𝐎𝐖𝐄𝐑 🔥"
+    
+    bot.reply_to, (
+    message,
+    f"🚀 ATTACK STARTED 🔥🔥\n"
+    f"IP : {target}\n"
+    f"PORT : {port}\n"
+    f"TIME : {time_duration}s\n"
+    f"📊 <b>𝐒𝐥𝐨𝐭𝐬:</b> {slots_used}/{MAX_SLOTS} (Left: {slots_left})\n"
+    f"━━━━━━━━━━━━━━━━━━━━━━\n"
+    f"🚀 <b>𝐏𝐨𝐰𝐞𝐫:</b> 𝐃𝐑𝐗 𝐃𝐃𝐎𝐒 𝐏𝐎𝐖𝐄𝐑 🔥"
     ), parse_mode="HTML")
 
     # Background thread for execution and finished message
