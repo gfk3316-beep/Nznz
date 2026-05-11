@@ -164,7 +164,7 @@ def show_my_info(message):
     username = message.from_user.first_name
     
     # Starting message
-    sent_msg = bot.reply_to(message, "⏳ <b>𝐅𝐞𝐭𝐜𝐡𝐢𝐧𝐠 𝐋𝐢𝐯𝐞 𝐃𝐚𝐭𝐚...</b>", parse_mode="HTML")
+    sent_msg = bot.reply_to(message, "⏳ <b>𝐅𝐞𝐭𝐜𝐡𝐢𝐧𝐠 𝐋𝐢𝐯𝐞 𝐃𝐚𝐭𝐚...</b>", )
 
     def live_timer():
         # 12 baar update karega (5 sec gap = 1 minute total live dikhayega)
