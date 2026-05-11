@@ -1,4 +1,7 @@
 {
     "bot_token": "8297315508:AAFUmMESNNRkXMyWFLuWBV6mhh7maNHzd7o",
     "admin_id": "7537581754"
+    "MONGO_URI": "mongodb+srv://gfk3316_db_user:EHP58oXcvYeaDzQ2@cluster0.3v8tvne.mongodb.net/?appName=Cluster0"
+    "API_KEY":"820526a634578acaa7920f570b29f9e7223a30320ffa6e63e067e464c3c86d94"
+    "API_URL": "https://kimstress.st/api/v1"
 }
