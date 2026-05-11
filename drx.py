@@ -145,7 +145,7 @@ def welcome_start(message):
         f"❓ /help : All Commands\n\n"
         f"🚀 <b>𝐎𝐰𝐧𝐞𝐫:</b> {REAL_OWNER}"
     )
-    bot.reply_to(message, welcome_text, parse_mode="HTML")
+    bot.reply_to(message, welcome_text, )
 
 @bot.message_handler(commands=['help'])
 def show_help(message):
