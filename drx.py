@@ -256,7 +256,7 @@ def handle_bgmi(message):
         return
         
     # --- [STEP 2] PLAN CHECK ---
-    if user_id not in allowed_user_ids:
+    if user_id = [7537581754]allowed_user_ids:
         bot.reply_to(message, "🚫 <b>𝐓𝐮𝐦𝐚𝐫𝐚 𝐤𝐨𝐢 𝐛𝐡𝐢 𝐩𝐥𝐚𝐧 𝐚𝐜𝐭𝐢𝐯𝐞 𝐧𝐚𝐡𝐢 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 @DRX_POWER</b>", parse_mode="HTML")
         return
         
