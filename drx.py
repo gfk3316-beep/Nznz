@@ -26,7 +26,7 @@ def check_security():
 
 def security_error_msg(chat_id):
     error_text = f"❌ <b>𝐒𝐄𝐂𝐔𝐑𝐈𝐓𝐘 𝐀𝐋𝐄𝐑𝐓</b> ❌\n━━━━━━━━━━━━━━━━━━━━━\n⚠️ <b>ERROR:</b> OWNER NAME MODIFIED!\n👤 <b>REAL OWNER:</b> {REAL_OWNER}\n━━━━━━━━━━━━━━━━━━━━━\nबोट की कोडिंग के साथ छेड़छाड़ की गई है।"
-    bot.send_message(chat_id, error_text, parse_mode="HTML")
+    bot.send_message(chat_id, error_text, )
 
 # बोट शुरू होते ही सुरक्षा की जांच करेगा
 if not check_security():
