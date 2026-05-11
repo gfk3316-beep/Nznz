@@ -203,7 +203,7 @@ def show_my_info(message):
 
             try:
                 # Har 5 second mein message update hoga
-                bot.edit_message_text(response, chat_id=message.chat.id, message_id=sent_msg.message_id, parse_mode="HTML")
+                bot.edit_message_text(response, chat_id=message.chat.id, message_id=sent_msg.message_id, )
             except Exception:
                 # Agar user ne chat delete ki ya same text edit karne ki koshish ki toh error handle hoga
                 break
