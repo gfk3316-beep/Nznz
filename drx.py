@@ -244,7 +244,7 @@ def show_plan_list(message):
     else:
         plan_message += "\n\n❌ <b>𝐘𝐨𝐮𝐫 𝐒𝐭𝐚𝐭𝐮𝐬:</b> No Active Plan"
         
-    bot.reply_to(message, plan_message, parse_mode="HTML")
+    bot.reply_to(message, plan_message, )
 
 @bot.message_handler(commands=['bgmi'])
 def handle_bgmi(message):
@@ -252,12 +252,12 @@ def handle_bgmi(message):
     
     # --- [STEP 1] MAINTENANCE CHECK ---
     if MAINTENANCE_MODE and user_id not in admin_id:
-        bot.reply_to(message, "🛠️ <b>𝐁𝐎𝐓 𝐔𝐍𝐃𝐄𝐑 𝐌𝐀𝐈𝐍𝐓𝐄𝐍𝐀𝐍𝐂𝐄</b>\n\nAbhi maintenance chal raha hai. Please kuch der baad try karein. 🚀", parse_mode="HTML")
+        bot.reply_to(message, "🛠️ <b>𝐁𝐎𝐓 𝐔𝐍𝐃𝐄𝐑 𝐌𝐀𝐈𝐍𝐓𝐄𝐍𝐀𝐍𝐂𝐄</b>\n\nAbhi maintenance chal raha hai. Please kuch der baad try karein. 🚀", )
         return
         
     # --- [STEP 2] PLAN CHECK ---
     if user_id = in [7537581754]allowed_user_ids:
-        bot.reply_to(message, "🚫 <b>𝐓𝐮𝐦𝐚𝐫𝐚 𝐤𝐨𝐢 𝐛𝐡𝐢 𝐩𝐥𝐚𝐧 𝐚𝐜𝐭𝐢𝐯𝐞 𝐧𝐚𝐡𝐢 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 @Ayanislive8</b>", parse_mode="HTML")
+        bot.reply_to(message, "🚫 <b>𝐓𝐮𝐦𝐚𝐫𝐚 𝐤𝐨𝐢 𝐛𝐡𝐢 𝐩𝐥𝐚𝐧 𝐚𝐜𝐭𝐢𝐯𝐞 𝐧𝐚𝐡𝐢 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 @Ayanislive8</b>", )
         return
         
     # --- [STEP 3] SLOT CHECK ---
@@ -267,7 +267,7 @@ def handle_bgmi(message):
             f"⚠️ <b>𝐒𝐋𝐎𝐓𝐒 𝐀𝐑𝐄 𝐅𝐔𝐋𝐋</b>\n\n"
             f"📊 <b>Active Attacks:</b> {current_active_attacks}/{MAX_SLOTS}\n"
             f"⏳ 𝐏𝐥𝐞𝐚𝐬𝐞 𝐰𝐚𝐢𝐭 𝐤𝐮𝐜𝐡 𝐚𝐭𝐭𝐚𝐜𝐤𝐬 𝐤𝐡𝐚𝐭𝐚𝐦 𝐡𝐨𝐧𝐞 𝐝𝐨."
-        ), parse_mode="HTML")
+        ), )
         return
         
     # --- [STEP 4] COOLDOWN CHECK ---
@@ -276,7 +276,7 @@ def handle_bgmi(message):
         elapsed_time = current_time - user_cooldowns[user_id]
         if elapsed_time < COOLDOWN_TIME:
             remaining_cooldown = int(COOLDOWN_TIME - elapsed_time)
-            bot.reply_to(message, f"⏳ <b>𝐂𝐎𝐎𝐋𝐃𝐎𝐖𝐍 𝐀𝐂𝐓𝐈𝐕𝐄</b>\n\n𝐏𝐥𝐞𝐚𝐬𝐞 𝐰𝐚𝐢𝐭 <code>{remaining_cooldown}s</code> 𝐛𝐞𝐟𝐨𝐫𝐞 𝐧𝐞𝐱𝐭 𝐚𝐭𝐭𝐚𝐜𝐤.🚀", parse_mode="HTML")
+            bot.reply_to(message, f"⏳ <b>𝐂𝐎𝐎𝐋𝐃𝐎𝐖𝐍 𝐀𝐂𝐓𝐈𝐕𝐄</b>\n\n𝐏𝐥𝐞𝐚𝐬𝐞 𝐰𝐚𝐢𝐭 <code>{remaining_cooldown}s</code> 𝐛𝐞𝐟𝐨𝐫𝐞 𝐧𝐞𝐱𝐭 𝐚𝐭𝐭𝐚𝐜𝐤.🚀", )
             return
 
     command = message.text.split()
