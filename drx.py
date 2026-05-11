@@ -155,7 +155,7 @@ def show_help(message):
     if str(message.chat.id) in admin_id:
         help_text += "\n👑 <b>ADMIN:</b>\n/genkey, /broadcast, /maintenance, /update, /add, /remove"
     help_text += f"\n━━━━━━━━━━━━━━━━━━━━━━\n🚀 <b>𝐎𝐰𝐧𝐞𝐫:</b> {REAL_OWNER}"
-    bot.send_message(message.chat.id, help_text, parse_mode="HTML")
+    bot.send_message(message.chat.id, help_text, )
 
 # --- /myinfo Command Logic (Redeem Only) ---
 @bot.message_handler(commands=['myinfo'])
